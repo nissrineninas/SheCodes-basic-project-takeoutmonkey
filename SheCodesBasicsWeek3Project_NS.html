@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>takeoutmonkey.com</title>
+    <style>
+      .brand {
+        color: rgba(204, 103, 51, 0.7);
+      }
+
+      a {
+        display: block;
+        color: rgb(76, 107, 31, 90%);
+        text-decoration: none;
+      }
+      body {
+        background: #fff;
+      }
+      button {
+        background-color: rgb(100, 163, 111) 90.2%;
+        border: 1px solid rgba(206, 240, 185, 0.7);
+        border-radius: 10px;
+        box-shadow: 8px 5px rgba(65, 64, 62, 0.2);
+        color: #4c6b1f;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 10px 20px;
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        background: burlywood;
+        color: rgba(206, 240, 185, 0.7);
+      }
+      div {
+        background: linear-gradient(
+          109.6deg,
+          rgb(251, 250, 225) 11.2%,
+          rgb(206, 240, 185) 47.5%,
+          rgb(100, 163, 111) 100.2%
+        );
+        border-radius: 20px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-weight: 200px;
+        margin: 0% auto;
+        padding: 10px;
+        text-align: center;
+        width: 80%;
+      }
+      img {
+        border: 1px solid rgb(251, 250, 225) 11.2%;
+        border-radius: 200px;
+        display: block;
+        margin: 0% auto;
+        max-width: 70%;
+      }
+      p {
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Welcome to <span class="brand">takeoutmonkey.com </span> 🐒</h1>
+      <h3>
+        work long hours? always on the go? no time no cook? always eating junk?
+      </h3>
+      <h2>
+        <span class="brand"> takeoutmonkey.com</span> has got your back 😃
+      </h2>
+
+      <hr />
+      <img
+      src=https://s3.amazonaws.com/shecodesio-production/uploads/files/000/012/384/original/food-monkey-illustration-white-background-33242250.jpg?1625511555"
+      alt="monkey serving food" />
+
+      <p>
+        <span class="brand">takeoutmonkey.com</span> is not just any an online
+        food delivery company!
+        <em>
+          We fight Obesity by making nutritious food is accessible to everyone.
+        </em>
+
+        founded by my imagination in 2021 in Munich, Germany. <br />
+        <strong> making sure people don't miss a healthy meal! </strong>
+        .
+      </p>
+      <a
+        href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight"
+        target="_blank"
+        >more about Obesity and overweight
+      </a>
+      <br />
+      <button class="contactUs">Get in Touch</button>
+    </div>
+    <script>
+      /* I know this looks bad but i am experimenting with code!*/
+      function updateHeading(newGreeting, newGreeting2, newGreeting3) {
+        let changeHeading = document.querySelector("h1");
+        let changeHeading2 = document.querySelector("h2");
+        let changeHeading3 = document.querySelector("h3");
+        changeHeading.innerHTML = newGreeting;
+        changeHeading2.innerHTML = newGreeting2;
+        changeHeading3.innerHTML = newGreeting3;
+      }
+
+      function ageCheck(age) {
+        return age >= 18;
+      }
+
+      function getInformation() {
+        let firstName = prompt("What's your name?");
+        let age = prompt("How old are you?");
+
+        if (ageCheck(age)) {
+          updateHeading(
+            `We'll be in touch with you shortly, ${firstName}`,
+            "nice",
+            "😃"
+          );
+        } else {
+          alert("❎legally you're too young to use our services");
+          updateHeading(
+            `Sorry, come back when you're older, ${firstName} 😔`,
+            "bummer",
+            "🤔"
+          );
+        }
+      }
+      let contactUsClicked = document.querySelector("button");
+      contactUsClicked.addEventListener("click", getInformation);
+    </script>
+  </body>
+</html>
